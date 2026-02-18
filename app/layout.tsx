@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { Metadata } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
-import Image from "next/image";
 
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
