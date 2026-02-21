@@ -1,12 +1,11 @@
 "use client";
-export default function Home() {
+
+import Home from "./home/page";
+
+export default function App() {
   return (
     <section className="flex flex-col items-center justify-center">
-      <div className="my-12">
-        <h2>
-          AM Academy
-        </h2>
-      </div>
+        <Home />
     </section>
   );
 }

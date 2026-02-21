@@ -7,6 +7,8 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import NavBar from "@/components/navbar";
+import Image from "next/image";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -41,18 +43,7 @@ export default function RootLayout({
             </main>
 
             {/* Footer */}
-            <footer className="relative z-20 w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://mohamed-amine-laz.vercel.app/en"
-                title="mohamed amine portfolio"
-              >
-                <span className="text-default-600">Developed by</span>
-                <p className="text-primary">Mohamed Amine LAZREG</p>
-              </Link>
-            </footer>
-
+            <Footer />
           </div>
         </Providers>
       </body>
