@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
+import NavBar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -34,10 +35,7 @@ export default function RootLayout({
       >
         <Providers>
           <div className="relative min-h-screen flex flex-col overflow-hidden">
-            {/* Transparent overlay over ALL background */}
-            <div className="absolute inset-0 bg-white/50 backdrop-blur-sm z-10" />
-
-            {/* Main content */}
+            <NavBar />
             <main className="z-20 mx-auto max-w-7xl px-6 flex-1">
               {children}
             </main>
