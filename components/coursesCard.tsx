@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardHeader, CardBody, User, Image } from "@heroui/react";
+import { Card, CardHeader, CardBody, User, Image, Tooltip } from "@heroui/react";
 import { Rating } from "@smastrom/react-rating";
 import { Link } from "@heroui/link";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function Course() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -45,7 +46,12 @@ export default function Course() {
             </CardHeader>
             <CardBody className="overflow-visible py-2">
               <p className="text-[#1fa6a6] text-base font-bold">Mobile</p>
-              <small className="text-default-500">De Zéro à Expert : <br/> Maîtrisez le développement Cross-Platform</small>
+              <div className="flex flex-row justify-between">
+                <small className="text-default-500">De Zéro à Expert : <br/> Maîtrisez le développement Cross-Platform</small>
+                <Tooltip content="Visit course page" placement="bottom-start" size="sm" className="bg-black/50 text-white">
+                  <FiExternalLink onClick={() => window.open("https://heroui.com", "_blank")} color="#737373" size={25}/>
+                </Tooltip>
+              </div>
               <h4 className="font-bold text-large">React Native</h4>
               <Rating style={{ right:5 , maxWidth: 150 }} value={rating} onChange={setRating} />
               <div className="flex flex-col items-start gap-2 mt-4">
