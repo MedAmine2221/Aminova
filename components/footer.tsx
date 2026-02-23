@@ -20,30 +20,30 @@ export default function Footer() {
         <div className="flex flex-row justify-end pl-96">
           <div className="flex flex-col">
             <p className="text-[#f4b438] font-bold mr-10 mb-2 mt-6">Product</p>
-            <Link href={"/"} className="text-white mr-10 mt-2">Overview</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Features</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Solutions</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Tutorials</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Pricing</Link>
+            <Link href={"/overview"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Overview</Link>
+            <Link href={"/features"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Features</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Solutions</Link>
+            <Link href={"/tutorial"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Tutorials</Link>
+            <Link href={"/pricing"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Pricing</Link>
           </div>
           <div className="flex flex-col">
             <p className="text-[#f4b438] font-bold mr-10 mb-2 mt-6">Company</p>
-            <Link href={"/"} className="text-white mr-10 mt-2">About us</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Careers</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">News</Link>
+            <Link href={"/about-us"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">About us</Link>
+            <Link href={"/career"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Careers</Link>
+            <Link href={"/news"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">News</Link>
           </div>
           <div className="flex flex-col">
             <p className="text-[#f4b438] font-bold mr-10 mb-2 mt-6">Social</p>
-            <Link href={"/"} className="text-white mr-10 mt-2">Facebook</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Instagram</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">LinkedIn</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Facebook</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Instagram</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">LinkedIn</Link>
           </div>
           <div className="flex flex-col">
             <p className="text-[#f4b438] font-bold mr-10 mb-2 mt-6">Legal</p>
-            <Link href={"/"} className="text-white mr-10 mt-2">Privacy Policy</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Terms of Service</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Cookie Policy</Link>
-            <Link href={"/"} className="text-white mr-10 mt-2">Contact</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Privacy Policy</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Terms of Service</Link>
+            <Link href={"/"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Cookie Policy</Link>
+            <Link href={"/contact"} className="text-white mr-10 mt-2 hover:text-[#f4b438]">Contact</Link>
           </div>
         </div>
       </div>
