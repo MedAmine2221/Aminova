@@ -17,6 +17,7 @@ export default function NavBar() {
           height={80}
           style={{ objectFit: "contain", height: "4rem", width: "auto" }}
           priority
+          onClick={() => window.location.href = "/"}
         />
       </NavbarContent>
 
