@@ -1,12 +1,14 @@
 "use client";;
 import AuthForm from "@/components/auth/authForm";
+import ForgotPasswordForm from "@/components/auth/forgotPasswordForm";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { FcGoogle } from "react-icons/fc"
-import { FiHome } from "react-icons/fi"
+import { FcGoogle } from "react-icons/fc";
+import { FiHome, FiLogIn } from "react-icons/fi";
 export default function Auth() {
   const [index, setIndex] = useState(0);
+  const [passToForget, setPassToForget] = useState(0);  
   const items = [
     "/logo-mobile-footer.png",
     "/BI.png",
@@ -24,7 +26,9 @@ export default function Auth() {
     }, 3000);
     return ()=> clearInterval(interval);
   },[]);
-
+  const handleForgotPass = () => {
+    setPassToForget((prev)=>(prev + 1) % 2);
+  }
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
@@ -53,16 +57,30 @@ export default function Auth() {
             AM Academy – High-quality courses <br /> to boost your skills and grow your expertise
           </p>
         </div>
-        <div className="md:w-1/2 flex flex-col items-center justify-center p-8 bg-white rounded-tr-3xl rounded-br-3xl">
-          <FiHome onClick={() => {window.location.href = "/"}} size={25} className="mb-4 text-gray-400 hover:text-gray-600" />
-          <h2 className="text-[#0d4f4f] font-extrabold text-2xl mb-6">Login</h2>
-          <AuthForm />
-          <div className="flex items-center w-full justify-center gap-2 mt-4 cursor-pointer border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-100 transition-colors duration-300">
-            <FcGoogle size={25} />
-            <span className="text-gray-500 ml-2">Sign in with Google</span>
-          </div>
-          <p className="mt-6 text-gray-500">Don't have an account? <a href="/signup" className="text-[#0d4f4f] font-bold hover:text-[#1fa6a6] underline">Sign Up</a></p>
-        </div>
+        <AnimatePresence mode= "wait">
+          <motion.div
+            key={passToForget}
+            initial = {{ opacity: 0 }}
+            animate = {{ opacity: 1 }}
+            exit = {{ opacity: 0 }}
+            transition = {{ duration: 1 }}
+            className="md:w-1/2 flex flex-col items-center justify-center p-8 bg-white rounded-tr-3xl rounded-br-3xl"
+          >
+            {passToForget === 0 ? <FiHome onClick={() => {window.location.href = "/"}} size={25} className="mb-4 text-gray-400 hover:text-gray-600" />
+             : <FiLogIn size={25} className="mb-4 text-gray-400 hover:text-gray-600" onClick={() => setPassToForget(0)} />}
+            <h2 className="text-[#0d4f4f] font-extrabold text-2xl mb-6">{passToForget === 0 ? "Login" : "Reset Password"}</h2>
+            {passToForget === 0 ? <AuthForm passToForgetPass={handleForgotPass} /> : <ForgotPasswordForm />}
+            {passToForget === 0 && (
+              <>
+                <div className="flex items-center w-full justify-center gap-2 mt-4 cursor-pointer border border-gray-300 rounded-lg py-2 px-4 hover:bg-gray-100 transition-colors duration-300">
+                  <FcGoogle size={25} />
+                  <span className="text-gray-500 ml-2">Sign in with Google</span>
+                </div>
+                <p className="mt-6 text-gray-500">Don't have an account? <a href="/signup" className="text-[#0d4f4f] font-bold hover:text-[#1fa6a6] underline">Sign Up</a></p>
+              </>
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );

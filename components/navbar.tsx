@@ -34,7 +34,7 @@ export default function NavBar() {
           <Link color="foreground" href="#">Courses</Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">Contact us</Link>
+          <Link color="foreground" href="/contact">Contact us</Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">FAQ's</Link>
