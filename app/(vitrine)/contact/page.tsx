@@ -93,7 +93,6 @@ export default function Tuto() {
                   <FiFacebook className="text-default-500 hover:text-blue-600" size={25} />
                   <FiInstagram className="text-default-500 hover:text-pink-600 transition-colors duration-300" size={25} />
                 </div>
-                <MapWithNoSSR />
               </div>
             </Form>
         </motion.div>
@@ -103,13 +102,7 @@ export default function Tuto() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <Image
-            src="/logo.png"
-            alt=""
-            width={600}
-            height={600}
-            priority
-          />
+          <MapWithNoSSR />
         </motion.div>
       </div>
     </section>

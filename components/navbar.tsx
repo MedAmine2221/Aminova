@@ -23,7 +23,7 @@ export default function NavBar() {
 
       <NavbarContent justify="end" className="hidden sm:flex gap-4 items-center">
         <NavbarItem isActive>
-          <Link className="text-[#1fa6a6]" href="#">
+          <Link className="text-[#1fa6a6]" href="/">
             Home
           </Link>
         </NavbarItem>

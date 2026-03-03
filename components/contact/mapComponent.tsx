@@ -15,14 +15,14 @@ L.Icon.Default.mergeOptions({
 export default function MapComponent() {
   return (
     <MapContainer
-      center={[35.8256, 10.63699]}
+      center={[35.820310, 10.562323]}
       zoom={13}
-      style={{ height: "200px", width: "200px" }}
+      style={{ height: "350px", width: "600px" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[35.8256, 10.63699]}>
+      <Marker position={[35.820310, 10.562323]}>
         <Popup>AMA Academy</Popup>
       </Marker>
     </MapContainer>
