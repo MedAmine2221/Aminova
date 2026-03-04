@@ -33,7 +33,7 @@ export default function Course() {
   return (
     <div className="flex flex-col items-center gap-6">
       {/* 3 Cards Row */}
-      <div className="flex flex-row gap-4 flex-wrap justify-center">
+      <div className="grid grid-cols-3 gap-4 flex-wrap justify-center">
         {currentTeachers.map((index) => (
           <Card key={index} className="py-4">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
