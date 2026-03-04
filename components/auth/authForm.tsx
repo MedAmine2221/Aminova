@@ -48,6 +48,7 @@ export default function AuthForm({ passToForgetPass }: { passToForgetPass: () =>
         }} className="text-[#0d4f4f] bg-transparent text-sm underline hover:text-[#1fa6a6]">Forgot Password?</Button>
       </div>
       <Button
+        onPress={() => window.location.href = "/students"}
         type="submit"
         className="self-center bg-[#0d4f4f] hover:bg-[#1fa6a6] text-white font-bold w-full rounded-xl transition-colors duration-300"
       >

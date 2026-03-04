@@ -11,7 +11,7 @@ export default function Course() {
   const [rating, setRating] = useState(3);
 
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const itemsPerPage = 3;
+  const itemsPerPage = 8;
   const totalPages = Math.ceil(list.length / itemsPerPage);
   const currentTeachers = list.slice(
     currentPage * itemsPerPage,
@@ -32,8 +32,8 @@ export default function Course() {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      {/* 3 Cards Row */}
-      <div className="grid grid-cols-3 gap-4 flex-wrap justify-center">
+      {/* 4 Cards Row */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 flex-wrap justify-center">
         {currentTeachers.map((index) => (
           <Card key={index} className="py-4">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">

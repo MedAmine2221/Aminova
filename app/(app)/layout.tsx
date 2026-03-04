@@ -1,0 +1,48 @@
+import "@/styles/globals.css";
+import { Metadata } from "next";
+import clsx from "clsx";
+
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/config/fonts";
+import Footer from "@/components/footer";
+import '@smastrom/react-rating/style.css';
+import InternNavBar from "@/components/connectedNavbar";
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/logo-mobile-footer.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html suppressHydrationWarning lang="en">
+      <head />
+      <body
+        className={clsx(
+          "min-h-screen text-foreground bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+          <div className="relative min-h-screen flex flex-col overflow-hidden">
+            <InternNavBar />
+            <main className="z-20 mx-auto max-w-7xl px-6 flex-1">
+              {children}
+            </main>
+
+            {/* Footer */}
+            <Footer />
+          </div>
+      </body>
+    </html>
+  );
+}
