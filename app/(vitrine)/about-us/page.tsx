@@ -51,7 +51,7 @@ export default function AboutUs() {
         className="flex flex-col items-center justify-center"
       >
         <p className="text-2xl font-bold text-[#1fa6a6] mb-6">Our Services</p>
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="justify-center grid grid-cols-2 md:grid-cols-4">
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -61,7 +61,8 @@ export default function AboutUs() {
                 height={200}
               />  
             }
-            />
+            service={"Catalogue Structuré de Cours"}
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -70,7 +71,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            }
+            service={"Système de Suivi & Évaluation Continue"}
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -79,7 +82,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            }
+            service={"Mode Classe (Limité à 50 Étudiants)"} 
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -88,7 +93,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            }
+            service={"Mode Apprentissage Individuel"} 
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -97,7 +104,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            } 
+            service={"Système de Communication Complet"}
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -106,7 +115,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            }
+            service ={"Espace Documents & Ressources"}
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -115,7 +126,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            }
+            service={"Système de Notation Transparent"} 
+          />
           <Service serviceImage={
               <Image
                 alt="Card background"
@@ -124,7 +137,9 @@ export default function AboutUs() {
                 width={270}
                 height={200}
               />
-            } />
+            }
+            service={"Système de Paiement Sécurisé"}
+          />
           <Service 
             serviceImage={
               <Image
@@ -135,6 +150,19 @@ export default function AboutUs() {
                 height={200}
               />
             }
+            service={"Blog & Avis Communautaire"}
+          />
+          <Service 
+            serviceImage={
+              <Image
+                alt="Card background"
+                className="object-cover rounded-xl"
+                src="/blog.png"
+                width={270}
+                height={200}
+              />
+            }
+            service={"Système de Contrôle Qualité des Cours et des Professeurs"}
           />
         </div>
       </motion.div>
