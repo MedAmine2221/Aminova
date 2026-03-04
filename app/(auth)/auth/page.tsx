@@ -23,37 +23,44 @@ export default function Auth() {
   useEffect(()=>{
     const interval = setInterval(()=>{
       setIndex((prev)=>(prev + 1) % items.length);
-    }, 3000);
+    }, 5000);
     return ()=> clearInterval(interval);
   },[]);
   const handleForgotPass = () => {
     setPassToForget((prev)=>(prev + 1) % 2);
   }
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}   
+      className="min-h-screen flex items-center justify-center px-4"
+    >
+      <div className="max-w-4xl w-full h-[600px] bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
         <div className="md:w-1/2 bg-gradient-to-br from-[#0d4f4f] to-[#1fa6a6] flex flex-col items-center justify-center p-8 relative">
           <div className="absolute top-0 right-0 w-48 h-48 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-white opacity-5 rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none" />
-          <AnimatePresence mode= "wait">
-            <motion.div
-              key={index}
-              initial = {{ opacity: 0 }}
-              animate = {{ opacity: 1 }}
-              exit = {{ opacity: 0 }}
-              transition = {{ duration: 1 }}
-            >
-              <Image
-                src={items[index]}
-                alt="AM Academy Logo"
-                width={200}
-                height={200}
-                priority
-              />
-            </motion.div>
-          </AnimatePresence>
+          <div className="absolute top-12">
+            <AnimatePresence mode= "wait">
+              <motion.div
+                key={index}
+                initial = {{ opacity: 0 }}
+                animate = {{ opacity: 1 }}
+                exit = {{ opacity: 0 }}
+                transition = {{ duration: 1 }}
+              >
+                <Image
+                  src={items[index]}
+                  alt="AM Academy Logo"
+                  width={200}
+                  height={200}
+                  priority
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-          <p className="text-white mt-6 text-center text-lg md:text-xl font-medium">
+          <p className="text-white mt-6 text-center justify-center text-lg md:text-xl font-medium">
             AM Academy – High-quality courses <br /> to boost your skills and grow your expertise
           </p>
         </div>
@@ -82,6 +89,6 @@ export default function Auth() {
           </motion.div>
         </AnimatePresence>
       </div>
-    </div>
+    </motion.div>
   );
 }
