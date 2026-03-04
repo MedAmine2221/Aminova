@@ -28,7 +28,7 @@ export default function NavBar() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">About us</Link>
+          <Link color="foreground" href="/about-us">About us</Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">Courses</Link>
