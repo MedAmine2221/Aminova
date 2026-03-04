@@ -32,11 +32,6 @@ export default function ForgotPasswordForm() {
       >
         Send Reset Link
       </Button>
-      {submitted && (
-        <div className="text-sm text-gray-200 mt-3 break-words">
-          You submitted: <code>{JSON.stringify(submitted)}</code>
-        </div>
-      )}
     </Form>
   );
 }

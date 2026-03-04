@@ -78,11 +78,6 @@ export default function Tuto() {
                   <Button type="submit" className="bg-transparent text-[#1fa6a6] font-bold border-2 border-[#1fa6a6] px-4 py-2 rounded-xl">
                     Send Message
                   </Button>
-                  {submitted && (
-                    <div className="text-small text-default-500">
-                      You submitted: <code>{JSON.stringify(submitted)}</code>
-                    </div>
-                  )}
               </div>
               <div className="flex flex-col gap-4 ml-8 justify-center items-center">
                 <p className="text-default-700 text-center">32 rue 1er juin Kalaa Sghira, Sousse 4021 Tunisie</p>

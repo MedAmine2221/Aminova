@@ -1,5 +1,5 @@
 "use client";;
-import { Button, Checkbox, Form, Input } from "@heroui/react";
+import { Button, Form, Input } from "@heroui/react";
 import React, { useState } from "react";
 
 export default function SignupForm() {
@@ -78,11 +78,6 @@ export default function SignupForm() {
       >
         Register
       </Button>
-      {submitted && (
-        <div className="text-sm text-gray-200 mt-3 break-words">
-          You submitted: <code>{JSON.stringify(submitted)}</code>
-        </div>
-      )}
     </Form>
   );
 }
