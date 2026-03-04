@@ -1,8 +1,8 @@
 "use client";;
 import News from "@/components/news";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Course from "@/components/coursesCard";
+import UploadCV from "@/components/selectFile";
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center">
@@ -15,8 +15,9 @@ export default function Home() {
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
         className="flex flex-col items-center justify-center mt-8"
-      >
-        <Course/>
+      >        
+      <UploadCV />
+      <Course/>
       </motion.div>
     </section>
   );

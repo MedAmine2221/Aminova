@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardHeader, CardBody, User, Image, Tooltip } from "@heroui/react";
+import { Card, CardHeader, CardBody, User, Image, Tooltip, Input } from "@heroui/react";
 import { Rating } from "@smastrom/react-rating";
 import { Link } from "@heroui/link";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiSearch } from "react-icons/fi";
 
 export default function Course() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -33,6 +33,19 @@ export default function Course() {
   return (
     <div className="flex flex-col items-center gap-6">
       {/* 4 Cards Row */}
+      <Input
+        isClearable
+        className="max-w-4xl"
+        placeholder="Search courses..."
+        type="text"
+        variant="bordered"
+        startContent={
+          <Tooltip placement="top">
+            <FiSearch color="#737373" size={20} />
+          </Tooltip>
+        }
+        // onClear={() => console.log("input cleared")}
+      />
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 flex-wrap justify-center">
         {currentTeachers.map((index) => (
           <Card key={index} className="py-4">
